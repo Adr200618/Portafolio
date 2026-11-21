@@ -1,0 +1,24 @@
+{
+  "nombre": "Adrian Monroy",
+  "rol": "Estudiante de Ingeniería en Computación",
+  "resumen": "Apasionado por la tecnología y el desarrollo web, siempre en busca de aprender nuevas habilidades y enfrentar desafíos que me permitan crecer profesionalmente.",
+  "descripcion": "Estudiante de ingeniería actualmente aprendiendo sobre frameworks web y desarrollo frontend.",
+  "foto": "/images/perfil.jpg",
+  "fotoAlt": "Retrato de Adrian Monroy sonriendo",
+  "habilidades": [
+    { "categoria": "Frontend", "items": ["HTML", "CSS", "JavaScript", "TypeScript", "Astro"] },
+    { "categoria": "Herramientas", "items": ["Git", "GitHub", "VS Code", "pnpm"] }
+  ],
+  "formacion": [
+    { "titulo": "Estudiante de Ingeniería en Computación", "lugar": "Universidad Rafael Urdaneta", "periodo": "2023 – Actualidad" }
+  ],
+  "experiencia": [
+    { "titulo": "Proyecto académico", "lugar": "Universidad", "periodo": "2025", "detalle": "Desarrollo de una aplicación web en equipo usando Git y GitHub." }
+  ],
+  "contacto": {
+    "email": "monroy.adrian.saj@gmail.com",
+    "enlaces": [
+      { "nombre": "GitHub", "url": "https://github.com/Adr200618" }
+    ]
+  }
+}
