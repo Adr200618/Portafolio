@@ -1,0 +1,16 @@
+---
+import perfil from '../data/perfil.json';
+---
+<section class="container" aria-labelledby="habilidades-titulo">
+  <h2 id="habilidades-titulo">Habilidades</h2>
+  <div class="grid">
+    {perfil.habilidades.map((grupo) => (
+      <div class="panel">
+        <h3>{grupo.categoria}</h3>
+        <ul class="tags">
+          {grupo.items.map((item) => <li>{item}</li>)}
+        </ul>
+      </div>
+    ))}
+  </div>
+</section>

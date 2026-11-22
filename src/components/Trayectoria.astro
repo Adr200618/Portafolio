@@ -1,0 +1,27 @@
+---
+import perfil from '../data/perfil.json';
+
+const bloques = [
+  { titulo: 'Formación', datos: perfil.formacion },
+  { titulo: 'Experiencia', datos: perfil.experiencia },
+];
+---
+<section class="container" aria-labelledby="trayectoria-titulo">
+  <h2 id="trayectoria-titulo">Trayectoria</h2>
+  <div class="grid">
+    {bloques.map((bloque) => (
+      <div class="panel">
+        <h3>{bloque.titulo}</h3>
+        <ol class="timeline">
+          {bloque.datos.map((d) => (
+            <li>
+              <strong>{d.titulo}</strong>
+              <span>{d.lugar} · {d.periodo}</span>
+              <p>{d.detalle}</p>
+            </li>
+          ))}
+        </ol>
+      </div>
+    ))}
+  </div>
+</section>

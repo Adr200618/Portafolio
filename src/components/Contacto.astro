@@ -1,0 +1,17 @@
+---
+import perfil from '../data/perfil.json';
+---
+<section id="contacto" class="container" aria-labelledby="contacto-titulo">
+  <h2 id="contacto-titulo">Contacto</h2>
+  <p>¿Quieres colaborar o tienes una pregunta? Escríbeme o encuéntrame aquí:</p>
+  <ul class="links">
+    <li><a href={`mailto:${perfil.contacto.email}`}>{perfil.contacto.email}</a></li>
+    {perfil.contacto.enlaces.map((e) => (
+      <li>
+        <a href={e.url} target="_blank" rel="noopener noreferrer">
+          {e.nombre}<span class="sr-only"> (se abre en una pestaña nueva)</span>
+        </a>
+      </li>
+    ))}
+  </ul>
+</section>

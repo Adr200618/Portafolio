@@ -1,0 +1,17 @@
+---
+import perfil from '../data/perfil.json';
+import { ruta } from '../utils/ruta';
+---
+<section id="inicio" class="container hero" aria-labelledby="hero-titulo">
+  <div>
+    <p class="eyebrow">{perfil.rol}</p>
+    <h1 id="hero-titulo">{perfil.nombre}</h1>
+    <p class="lead">{perfil.resumen}</p>
+    <p>{perfil.descripcion}</p>
+    <p class="acciones">
+      <a class="btn" href={ruta('/proyectos/')}>Ver proyectos</a>
+      <a class="btn btn-sec" href="#contacto">Contactarme</a>
+    </p>
+  </div>
+  <img src={ruta(perfil.foto)} alt={perfil.fotoAlt} width="220" height="220" />
+</section>
