@@ -4,7 +4,7 @@
   "resumen": "Apasionado por la tecnología y el desarrollo web, siempre en busca de aprender nuevas habilidades y enfrentar desafíos que me permitan crecer profesionalmente.",
   "descripcion": "Estudiante de ingeniería actualmente aprendiendo sobre frameworks web y desarrollo frontend.",
   "foto": "/images/perfil.jpg",
-  "fotoAlt": "Retrato de Adrian Monroy sonriendo",
+  "fotoAlt": "Retrato de Adrian Monroy",
   "habilidades": [
     { "categoria": "Frontend", "items": ["HTML", "CSS", "JavaScript", "TypeScript", "Astro"] },
     { "categoria": "Herramientas", "items": ["Git", "GitHub", "VS Code", "pnpm"] }
