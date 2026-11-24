@@ -1,0 +1,19 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { ruta } from '../utils/ruta';
+
+interface Props { proyecto: CollectionEntry<'proyectos'>; }
+
+const { proyecto } = Astro.props;
+const { titulo, descripcion, imagen, imagenAlt, tecnologias } = proyecto.data;
+---
+<article class="card">
+  <img src={ruta(imagen)} alt={imagenAlt} width="640" height="360" loading="lazy" />
+  <div class="card-body">
+    <h3><a href={ruta(`/proyectos/${proyecto.id}/`)}>{titulo}</a></h3>
+    <p>{descripcion}</p>
+    <ul class="tags" aria-label="Tecnologías utilizadas">
+      {tecnologias.map((t) => <li>{t}</li>)}
+    </ul>
+  </div>
+</article>

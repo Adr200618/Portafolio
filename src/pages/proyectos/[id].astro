@@ -1,0 +1,30 @@
+---
+import { getCollection, render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import { ruta } from '../../utils/ruta';
+
+export async function getStaticPaths() {
+  const proyectos = await getCollection('proyectos');
+  return proyectos.map((proyecto) => ({ params: { id: proyecto.id }, props: { proyecto } }));
+}
+
+const { proyecto } = Astro.props;
+const { titulo, descripcion, imagen, imagenAlt, tecnologias, demo, codigo } = proyecto.data;
+const { Content } = await render(proyecto);
+---
+<Base titulo={titulo} descripcion={descripcion} imagen={imagen}>
+  <article class="container proyecto-cabecera">
+    <p><a href={ruta('/proyectos/')}>← Volver a proyectos</a></p>
+    <h1>{titulo}</h1>
+    <p class="lead">{descripcion}</p>
+    <img src={ruta(imagen)} alt={imagenAlt} width="1280" height="720" />
+    <ul class="tags" aria-label="Tecnologías utilizadas">
+      {tecnologias.map((t) => <li>{t}</li>)}
+    </ul>
+    <p class="acciones" style="margin-top:1rem">
+      {demo && <a class="btn" href={demo} target="_blank" rel="noopener noreferrer">Ver demo<span class="sr-only"> (pestaña nueva)</span></a>}
+      {codigo && <a class="btn btn-sec" href={codigo} target="_blank" rel="noopener noreferrer">Ver código<span class="sr-only"> (pestaña nueva)</span></a>}
+    </p>
+    <Content />
+  </article>
+</Base>

@@ -1,0 +1,29 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import Hero from '../components/Hero.astro';
+import Habilidades from '../components/Habilidades.astro';
+import Trayectoria from '../components/Trayectoria.astro';
+import ProyectoCard from '../components/ProyectoCard.astro';
+import Contacto from '../components/Contacto.astro';
+import { ruta } from '../utils/ruta';
+
+const destacados = (await getCollection('proyectos'))
+  .sort((a, b) => a.data.orden - b.data.orden)
+  .slice(0, 3);
+---
+<Base>
+  <Hero />
+  <div id="sobre-mi">
+    <Habilidades />
+    <Trayectoria />
+  </div>
+  <section class="container" aria-labelledby="destacados-titulo">
+    <h2 id="destacados-titulo">Proyectos destacados</h2>
+    <div class="grid">
+      {destacados.map((p) => <ProyectoCard proyecto={p} />)}
+    </div>
+    <p><a href={ruta('/proyectos/')}>Ver todos los proyectos →</a></p>
+  </section>
+  <Contacto />
+</Base>
