@@ -13,7 +13,7 @@
     { "titulo": "Estudiante de Ingeniería en Computación", "lugar": "Universidad Rafael Urdaneta", "periodo": "2023 – Actualidad" }
   ],
   "experiencia": [
-    { "titulo": "Proyecto académico", "lugar": "Universidad", "periodo": "2025", "detalle": "Desarrollo de una aplicación web en equipo usando Git y GitHub." }
+    { "titulo": "Aplicaciones web", "lugar": "Universidad", "periodo": "2026", "detalle": "Desarrollo de aplicaciones web en equipo usando diferentes frameworks." }
   ],
   "contacto": {
     "email": "monroy.adrian.saj@gmail.com",
